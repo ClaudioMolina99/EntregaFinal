@@ -1,0 +1,146 @@
+// Variables
+$primary-color: darkred;
+$secondary-color: grey;
+$font-stack: Arial, sans-serif;
+$bg-light: #f2f2f2;
+
+// Animación
+h1.magic {
+    animation-duration: 2s;
+}
+
+
+// Mixins
+@mixin flex-center($direction: row, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+// RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// TIPOGRAFÍA Y FONDO
+body {
+  font-family: $font-stack;
+  background-color: $bg-light;
+  color: black;
+}
+
+// Header
+header {
+  background-color: $secondary-color;
+  @include flex-center(column, 1rem);
+  padding: 1rem;
+
+  h1 {
+    color: $primary-color;
+    text-align: center;
+  }
+
+  nav {
+    ul {
+      @include flex-center(row, 20px);
+      list-style: none;
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $primary-color;
+          font-weight: bold;
+          font-size: large;
+        }
+      }
+    }
+  }
+}
+
+// Main
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+// Textos
+.textos-flex {
+  max-width: 800px;
+  text-align: center;
+
+  h2 {
+    color: crimson;
+    font-size: 1.8rem;
+    max-width: 60ch;
+  }
+}
+
+// Imagen Main
+.img-flex {
+  img {
+    @include responsive-img;
+  }
+}
+
+// Footer
+.footer-imgs {
+  @include flex-center(row, 1rem);
+  padding: 1rem;
+}
+
+.footer-img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+footer {
+  color: navy;
+  text-align: center;
+  font-size: medium;
+  margin-bottom: 1rem;
+}
+
+// MEDIA QUERIES
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+  }
+
+  .footer-imgs {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .textos-flex,
+  .img-flex {
+    width: 100%;
+    text-align: center;
+
+    img {
+      @include responsive-img;
+    }
+  }
+}
