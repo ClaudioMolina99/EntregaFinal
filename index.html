@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ángel Labruna - Inicio</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- Bootstrap CSS -->
+    <lincd /c/Users/claud/OneDrive/Desktop/PreEntrega3-Molina
+k href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+
+    <!-- Google Fonts: Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Magic Animations -->
     <link rel="stylesheet" href="./css/magic.css" />
@@ -17,10 +21,10 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body>
+<body style="font-family: 'Roboto Slab', serif;">
 
     <!-- Menú hamburguesa Bootstrap -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Ángel Labruna</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -39,11 +43,15 @@
         </div>
     </nav>
 
+    <!-- Reproductor de Spotify -->
+    <div class="spotify-container">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7nWMNNb74gmfTqBeX9yPE9?utm_source=generator&autoplay=1"
+            width="300" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+
     <main class="main-grid">
-        <!-- Animación de título con Magic Animations -->
         <div class="textos-flex">
             <h1 class="magic fadeIn">Ángel Amadeo Labruna<br>Futbolista y Director Técnico argentino.</h1>
-
         </div>
 
         <div class="img-flex">
@@ -64,6 +72,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pnXyJbsxZJ9eCwHjp+MBo7n1FvZ1o1JqS9LJb07X7l3ZxZ+eFzXuU+0RL2l4aASr"
         crossorigin="anonymous"></script>
+
+    <!-- Asegurarnos de que el menú hamburguesa funcione -->
+    <script>
+        const toggleButton = document.querySelector('.navbar-toggler');
+        const menu = document.querySelector('.navbar-collapse');
+
+        toggleButton.addEventListener('click', function () {
+            menu.classList.toggle('show');
+        });
+    </script>
+
 </body>
 
 </html>

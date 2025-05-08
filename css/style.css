@@ -1,3 +1,16 @@
+@charset "UTF-8";
+h1 {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +23,41 @@ body {
   color: black;
 }
 
+.navbar {
+  background-color: #222;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ff0000' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Cambié a rojo (#ff0000) */
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff0000 !important; /* Rojo */
+}
+
+.navbar-collapse {
+  justify-content: flex-end; /* Asegura que el menú colapsado se alinee correctamente */
+}
+
+.navbar-brand {
+  color: #ff0000 !important;
+}
+
+.navbar-brand:hover {
+  color: #ff0000 !important;
+}
+
 header {
-  background-color: grey;
+  background-color: #222;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +66,7 @@ header {
   padding: 1rem;
 }
 header h1 {
-  color: darkred;
+  color: #ff0000;
   text-align: center;
 }
 header nav ul {
@@ -34,7 +80,7 @@ header nav ul {
 }
 header nav ul li a {
   text-decoration: none;
-  color: darkred;
+  color: #ff0000;
   font-weight: bold;
   font-size: large;
 }
@@ -110,19 +156,6 @@ footer {
     width: 100%;
     height: auto;
   }
-}
-
-.fadeIn {
-    animation: fadeInAnimation 2s ease-out forwards;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 /*# sourceMappingURL=style.css.map */
