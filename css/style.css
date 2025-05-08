@@ -11,6 +11,7 @@ h1 {
     opacity: 1;
   }
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +46,8 @@ body {
 }
 
 .navbar-collapse {
-  justify-content: flex-end; /* Asegura que el menú colapsado se alinee correctamente */
+  justify-content: flex-end; /* Asegura que el menú colapsado se alinee correctamente a la derecha */
+  width: 100%; /* Asegura que el menú ocupe todo el espacio disponible */
 }
 
 .navbar-brand {
@@ -65,10 +67,12 @@ header {
   gap: 1rem;
   padding: 1rem;
 }
+
 header h1 {
   color: #ff0000;
   text-align: center;
 }
+
 header nav ul {
   display: flex;
   flex-direction: row;
@@ -78,6 +82,7 @@ header nav ul {
   list-style: none;
   padding: 0;
 }
+
 header nav ul li a {
   text-decoration: none;
   color: #ff0000;
@@ -99,6 +104,7 @@ header nav ul li a {
   max-width: 800px;
   text-align: center;
 }
+
 .textos-flex h2 {
   color: crimson;
   font-size: 1.8rem;
@@ -140,6 +146,7 @@ footer {
     flex-direction: row;
   }
 }
+
 @media (min-width: 1200px) {
   .main-grid {
     grid-template-columns: 1fr 1fr;
